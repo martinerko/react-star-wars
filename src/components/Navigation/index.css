@@ -1,0 +1,30 @@
+@media (min-width: 768px) {
+	.navbar-collapse {
+		padding-top: 0px !important;
+		padding-right: 38px !important;
+	}
+}
+
+nav.navbar>.container {
+	background-image: url(~/img/starwars.png);
+	background-repeat: no-repeat;
+	background-position: center 6px;
+}
+
+@media (max-width: 440px) {
+	nav.navbar>.container {
+		background-image: url(~/img/starwars-small.png);
+		background-position: center 15px;
+	}
+}
+
+.navbar-inverse .navbar-nav li>a.active, .navbar-inverse .navbar-nav li>a.active:focus, .navbar-inverse .navbar-nav li>a.active:hover {
+	color: #fff;
+	background-color: #080808;
+}
+
+@media (min-width: 768px) and (max-width: 987px) {
+	.navbar-form{
+		width:190px;
+	}
+}

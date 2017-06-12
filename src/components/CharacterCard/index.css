@@ -1,0 +1,97 @@
+.votes-panel {
+	text-align: center;
+}
+
+.votes-panel button {
+	border: 2px solid #f2f2f2;
+	background: none;
+	display: inline-block;
+	line-height: 2;
+	text-decoration: none;
+	padding: 5px;
+	text-align: center;
+	font-size: 15px;
+	color: #125688;
+	width: 40px;
+}
+
+.votes-panel button[disabled] {
+	opacity: 0.1;
+}
+
+.votes-panel button:not([disabled]):hover {
+	border-color: #125688;
+	outline: 0;
+}
+
+.votes-panel button:focus {
+	outline: 0;
+}
+
+.thumbnail{
+	display: inline-block;
+	color: #337ab7;
+}
+.thumbnail:hover{
+	 border-color: #08c;
+}
+
+.thumbnail .score {
+	text-align: center;
+	font-size: 15px;
+	color: #125688;
+	width: 40px;
+	display: inline-block;
+}
+
+@media(min-width: 1200px) {
+	.thumbnail {
+		width: 270px
+	}
+}
+
+@media(min-width: 720px) and (max-width:1199px) {
+	.thumbnail {
+		width: 225px
+	}
+}
+
+@media(min-width: 601px) and (max-width:719px) {
+	.thumbnail {
+		width: 33%;
+	}
+}
+
+@media(min-width: 401px) and (max-width:600px) {
+	.thumbnail {
+		width: 50%;
+	}
+}
+
+@media (max-width: 400px) {
+	.thumbnail {
+		width: 100%;
+		float: none;
+	}
+}
+
+figcaption {
+	font-weight: bold;
+	text-align: center;
+}
+
+
+.overall-score {
+	border-radius: 50%;
+	width: 40px;
+	height: 40px;
+	background: white;
+	background: rgba(255, 255, 255, 0.5);
+	position: absolute;
+	padding-top: 11px;
+	font-size: 15px;
+	line-height: 20px;
+	text-align: center;
+	margin: 10px 10px;
+	font-weight: bold;
+}

@@ -1,0 +1,70 @@
+.info-page {
+	background: white;
+	padding: 10px;
+	border-radius: 10px;
+	color: black;
+	min-height: 455px;
+}
+
+.info-page h1 {
+	color: black;
+}
+
+.label {
+	display: inline-block;
+	text-align: left;
+	width: 95px;
+	color: #337ab7;
+	font-size: 100%;
+}
+
+.detail-image, .detail-description {
+	vertical-align: top;
+	text-align: left;
+	display: inline-block;
+	width: 50%;
+}
+
+.detail-image {
+	text-align: center;
+	margin-bottom: 10px;
+}
+
+.detail-comment {
+	text-align: left;
+	padding-top: 10px;
+	display: block;
+	width: 50%;
+	float: right;
+	position: relative;
+	top: -190px;
+}
+
+.detail-comment form {
+	margin-bottom: 40px;
+}
+
+.detail-comment textarea {
+	resize: none;
+	margin-bottom: 5px;
+}
+
+@media (max-width: 987px) {
+	.detail-description {
+		padding-left: 10px;
+	}
+	.detail-comment {
+		top: 0;
+		float: none;
+		width: 100%;
+	}
+}
+
+@media (max-width: 500px) {
+	.detail-image, .detail-description, .detail-comment {
+		text-align: left;
+		width: 100%;
+		display: block;
+		float: none;
+	}
+}

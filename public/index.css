@@ -1,0 +1,33 @@
+body {
+	padding-top: 70px;
+	background: black url(img/stars.jpg) repeat;
+}
+
+h1 {
+	font-size: 20px;
+	margin-top: 0;
+	text-align: center;
+	color: white;
+}
+
+.no-results{
+	text-align: center;
+	color: white;
+}
+
+.loader {
+	position: fixed;
+	left: 0;
+	top: 0;
+	z-index: 9999;
+	width: 100%;
+	height: 100%;
+	overflow: visible;
+	background: #333 url('img/loader.gif') no-repeat center center;
+	opacity: 0.9;
+}
+
+.loader-small {
+	display: inline-block;
+	background: url('img/loader-small.gif') no-repeat center center;
+}
