@@ -13,7 +13,8 @@ The application uses a public [Star Wars API](https://swapi.co/api/).
 * application displays the characters ordered based on popularity of their votes
 * users an search for characters based on their name
 * users are able to see full details of the character together with the planet of their origin by clicking on the characters picture
-* users are able to write a simple comment in the character's detail page.
+* users are able to write a simple comment in the character's detail page
+* responsive design
 
 
 **Pictures**
@@ -35,5 +36,5 @@ npm start
 
 **Todos**
 
-* Tests
+* more tests
 * Service workers

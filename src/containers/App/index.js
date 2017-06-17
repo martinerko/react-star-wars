@@ -7,12 +7,18 @@ import reduce from 'lodash.reduce';
 import NavigationContainer from '../NavigationContainer';
 
 const propTypes = {
+  children: PropTypes.element,
   errors: PropTypes.array,
-  showLoader: PropTypes.bool,
-  children: PropTypes.element.isRequired
-}
+  showLoader: PropTypes.bool
+};
 
-class App extends Component {
+const defaultProps = {
+  children: null,
+  errors: [],
+  showLoader: false
+};
+
+export class App extends Component {
   alertOptions = {
     offset: 14,
     position: 'bottom left',
@@ -47,6 +53,7 @@ class App extends Component {
 }
 
 App.propTypes = propTypes;
+App.defaultProps = defaultProps;
 
 const mapStateToProps = (state) => {
   const showLoader = reduce(state, (showLoader, item) => showLoader || item.isFetching, false);
