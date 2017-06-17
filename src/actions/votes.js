@@ -13,7 +13,7 @@ export const updateCharacterVotes = (character, score) => {
         ...character,
         error
       })));
-  }
+  };
 };
 
 export const updateCharacterVotesInProgress = createAction(UPDATE_CHARACTER_VOTES.ACTION);
@@ -31,7 +31,7 @@ export const fetchVotedCharacters = () => {
       .catch(error => dispatch(fetchVotedCharactersError({
         error
       })));
-  }
+  };
 };
 
 export const fetchVotedCharactersInProgress = createAction(FETCH_VOTED_CHARACTERS.ACTION);

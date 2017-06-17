@@ -26,7 +26,7 @@ const votedCharactersReducer = (state = INITIAL_STATE_VOTED_CHARACTERS, action) 
     }
     case types.UPDATE_CHARACTER_VOTES.SUCCESS: {
       data = updateCharactersData( //
-        state.data, //orig data about all characters
+        state.data, // orig data about all characters
         action.payload, // new data arrived with updated score
         {
           error: null
@@ -40,7 +40,7 @@ const votedCharactersReducer = (state = INITIAL_STATE_VOTED_CHARACTERS, action) 
     }
     case types.UPDATE_CHARACTER_VOTES.ERROR: {
       data = updateCharactersData( //
-        state.data, //orig data about all characters
+        state.data, // orig data about all characters
         action.payload, // current data
         {
           error: action.payload.error // error that occured while performing change
@@ -52,7 +52,7 @@ const votedCharactersReducer = (state = INITIAL_STATE_VOTED_CHARACTERS, action) 
       };
     }
     default:
-      return state
+      return state;
   }
 };
 

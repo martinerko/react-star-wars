@@ -18,10 +18,10 @@ class Navigation extends Component {
         <div className="container">
           <div className="navbar-header">
             <button type="button" className="navbar-toggle" data-toggle="collapse" data-target="#navbar1">
-                <span className="sr-only">Toggle navigation</span>
-                <span className="icon-bar"></span>
-                <span className="icon-bar"></span>
-                <span className="icon-bar"></span>
+              <span className="sr-only">Toggle navigation</span>
+              <span className="icon-bar" />
+              <span className="icon-bar" />
+              <span className="icon-bar" />
             </button>
           </div>
           <div className="collapse navbar-collapse" id="navbar1">
@@ -29,7 +29,7 @@ class Navigation extends Component {
               <li><IndexLink to="/" activeClassName="active">Characters</IndexLink></li>
               <li><Link to="about" activeClassName="active">About</Link></li>
             </ul>
-            <Search dispatch={dispatch}/>
+            <Search dispatch={dispatch} />
           </div>
         </div>
       </nav>

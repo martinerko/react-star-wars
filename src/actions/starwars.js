@@ -11,7 +11,7 @@ export const fetchCharacters = (query) => {
       .then(response => dispatch(fetchCharactersSuccess(response)))
       .catch(error => dispatch(fetchCharactersError(error)));
   };
-}
+};
 
 export const fetchCharactersInProgress = createAction(FETCH_CHARACTERS.ACTION);
 export const fetchCharactersSuccess = createAction(FETCH_CHARACTERS.SUCCESS);
@@ -25,7 +25,7 @@ export const fetchCharacterDetail = (query) => {
       .then(response => dispatch(fetchCharacterDetailSuccess(response)))
       .catch(error => dispatch(fetchCharacterDetailError(error)));
   };
-}
+};
 
 export const fetchCharacterDetailInProgress = createAction(FETCH_CHARACTER_DETAIL.ACTION);
 export const fetchCharacterDetailSuccess = createAction(FETCH_CHARACTER_DETAIL.SUCCESS);
@@ -39,7 +39,7 @@ export const updateCharacterComment = (character, comment) => {
       .then(response => dispatch(updateCharacterCommentSuccess(response)))
       .catch(error => dispatch(updateCharacterCommentError(error)));
   };
-}
+};
 
 export const updateCharacterCommentInProgress = createAction(UPDATE_CHARACTER_COMMENT.ACTION);
 export const updateCharacterCommentSuccess = createAction(UPDATE_CHARACTER_COMMENT.SUCCESS);

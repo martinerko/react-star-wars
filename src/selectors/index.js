@@ -1,4 +1,4 @@
-import { createSelector } from 'reselect'
+import { createSelector } from 'reselect';
 import reduce from 'lodash.reduce';
 
 import { sortByScore } from '../helpers/common';
@@ -28,7 +28,7 @@ export const enhanceCharacterDetail = createSelector(
     return {
       ...character,
       overallScore
-    }
+    };
   }
 );
 
@@ -53,7 +53,7 @@ const enhancer = (characters, totalScore) => {
   const order = Object.keys(enhancedData)
     .map(key => enhancedData[key])
     .sort(sortByScore)
-    .map(item => item.id); //get their ids
+    .map(item => item.id); // get their ids
 
   return {
     ...characters,
@@ -64,8 +64,6 @@ const enhancer = (characters, totalScore) => {
     order
   };
 };
-
-
 
 export const enhanceCharacters = createSelector(
   [charactersSelector, totalScoreSelector],

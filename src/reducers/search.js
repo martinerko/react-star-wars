@@ -14,7 +14,6 @@ let data;
 
 const searchCharactersReducer = (state = INITIAL_STATE_ALL, action) => {
   switch (action.type) {
-
     case types.RESET_SEARCH.ACTION:
       return {
         ...INITIAL_STATE_ALL
@@ -50,7 +49,7 @@ const searchCharactersReducer = (state = INITIAL_STATE_ALL, action) => {
 
     case types.UPDATE_CHARACTER_VOTES.ACTION: {
       data = updateCharactersData( //
-        state.data, //orig data about all characters
+        state.data, // orig data about all characters
         action.payload, // current data
         {
           updatingScore: true // + other changes
@@ -64,7 +63,7 @@ const searchCharactersReducer = (state = INITIAL_STATE_ALL, action) => {
     }
     case types.UPDATE_CHARACTER_VOTES.SUCCESS: {
       data = updateCharactersData( //
-        state.data, //orig data about all characters
+        state.data, // orig data about all characters
         action.payload, // new data arrived with updated score
         {
           error: null
@@ -78,7 +77,7 @@ const searchCharactersReducer = (state = INITIAL_STATE_ALL, action) => {
     }
     case types.UPDATE_CHARACTER_VOTES.ERROR: {
       data = updateCharactersData( //
-        state.data, //orig data about all characters
+        state.data, // orig data about all characters
         action.payload, // current data
         {
           error: action.payload.error // error that occured while performing change

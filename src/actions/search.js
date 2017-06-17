@@ -11,8 +11,8 @@ export const searchCharacters = (query) => {
       .then(response => dispatch(searchCharactersSuccess(response)))
       .then(() => browserHistory.push('/search'))
       .catch(error => dispatch(searchCharactersError(error)));
-  }
-}
+  };
+};
 
 // search characters
 export const searchCharactersInProgress = createAction(SEARCH_CHARACTERS.ACTION);

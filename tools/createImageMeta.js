@@ -11,11 +11,10 @@ const databankReducer = (csm, {slug, title, base_images}) => {
   return csm;
 };
 
-
 const createMeta = (count, filter) => {
   const feedsToFetch = [];
   for (let offset = 0; offset <= count; offset += 40) {
-    feedsToFetch.push(`http://www.starwars.com/_grill/filter/databank?filter=${filter}&mod=4&offset=${offset}`)
+    feedsToFetch.push(`http://www.starwars.com/_grill/filter/databank?filter=${filter}&mod=4&offset=${offset}`);
   }
 
   Promise.map(feedsToFetch, feed => download(feed))

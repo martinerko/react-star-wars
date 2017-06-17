@@ -26,14 +26,14 @@ class Characters extends Component {
   }
 
   renderTitle() {
-    return <h1>Star Wars Heroes</h1>
+    return <h1>Star Wars Heroes</h1>;
   }
 
   renderCharacters() {
     const {characters, dispatch} = this.props;
     const {data, order} = characters;
     return order.map(characterId => {
-      return <CharacterCard key={`character-${characterId}`} character={data[characterId]} dispatch={dispatch} />
+      return <CharacterCard key={`character-${characterId}`} character={data[characterId]} dispatch={dispatch} />;
     });
   }
 
@@ -47,7 +47,7 @@ class Characters extends Component {
       return <p className="no-results">No heroes found....</p>;
     }
     return (
-      <InfiniteScroll className="thumbnails" useWindow={true} pageStart={pageStart} loadMore={this.loadItems} hasMore={hasMore}>
+      <InfiniteScroll className="thumbnails" useWindow pageStart={pageStart} loadMore={this.loadItems} hasMore={hasMore}>
         {this.renderCharacters()}
       </InfiniteScroll>
     )

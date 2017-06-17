@@ -13,7 +13,7 @@ const propTypes = {
 class SearchedCharacters extends Characters {
   loadItems(pageNumber) {
     const {dispatch, searchTerm} = this.props;
-    //console.log('searching: %s - page #%d', searchTerm, pageNumber);
+    // console.log('searching: %s - page #%d', searchTerm, pageNumber);
     dispatch(searchCharacters({
       searchTerm,
       pageNumber
@@ -23,9 +23,9 @@ class SearchedCharacters extends Characters {
   renderTitle() {
     const {searchTerm} = this.props;
     if (!searchTerm) {
-      return <h1>Search for your heroes!</h1>
+      return <h1>Search for your heroes!</h1>;
     }
-    return <h1>Search results for: {searchTerm}</h1>
+    return <h1>Search results for: {searchTerm}</h1>;
   }
 }
 

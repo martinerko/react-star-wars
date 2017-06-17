@@ -11,9 +11,9 @@ const resolveCharacterImage = (name) => {
 };
 
 const normalizeCharacter = (character) => {
-  const {name, url, score = 0, comment=''} = character;
-  const id = url.replace(REGEXP_NUMBERS_ONLY, ''); //resolve character identifier
-  const image = resolveCharacterImage(name); //resolve external image
+  const {name, url, score = 0, comment = ''} = character;
+  const id = url.replace(REGEXP_NUMBERS_ONLY, ''); // resolve character identifier
+  const image = resolveCharacterImage(name); // resolve external image
 
   return {
     ...character,
@@ -28,8 +28,8 @@ const normalizeCharacter = (character) => {
 };
 
 const normalizeCharacters = (data) => {
-  //use lodash.reduce here sice voted characters stored in firebase are returned as an object
-  //wheras data from service are returned as an array
+  // use lodash.reduce here sice voted characters stored in firebase are returned as an object
+  // wheras data from service are returned as an array
   return reduce(data, (map, character) => {
     const item = normalizeCharacter(character);
     return {
@@ -38,7 +38,6 @@ const normalizeCharacters = (data) => {
     };
   }, {});
 };
-
 
 const sortByScore = (a, b) => {
   if (a.score > b.score) {
@@ -49,5 +48,4 @@ const sortByScore = (a, b) => {
   return a.id - b.id;
 };
 
-
-export { resolveCharacterImage, normalizeCharacters, normalizeCharacter, sortByScore }
+export { resolveCharacterImage, normalizeCharacters, normalizeCharacter, sortByScore };

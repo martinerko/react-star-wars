@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
-import { updateCharacterComment } from '../../actions/starwars'
+import { updateCharacterComment } from '../../actions/starwars';
 import './index.css';
 
 const propTypes = {
@@ -45,7 +45,7 @@ class CharacterDetail extends Component {
 
   renderTitle() {
     const {name = 'Unknown...'} = this.props.detail;
-    return <h1>Star Wars Heroe: {name}</h1>
+    return <h1>Star Wars Heroe: {name}</h1>;
   }
 
   render() {
@@ -78,8 +78,7 @@ class CharacterDetail extends Component {
         <section className="detail-comment">
           <form onSubmit={this.handleSubmit}>
             <label htmlFor="comment">Comment:</label>
-            <textarea disabled={updatingComment} ref={node => this.characterComment = node} className={updatingComment ? 'form-control loader-small' : 'form-control'} rows="5" id="comment" required value={this.state.comment} onChange={this.handleChange}>
-            </textarea>
+            <textarea disabled={updatingComment} ref={node => this.characterComment = node} className={updatingComment ? 'form-control loader-small' : 'form-control'} rows="5" id="comment" required value={this.state.comment} onChange={this.handleChange} />
             <button disabled={updatingComment} type="submit" className="btn btn-default pull-right">Save</button>
           </form>
         </section>

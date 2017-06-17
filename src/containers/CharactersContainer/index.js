@@ -11,7 +11,7 @@ const propTypes = {
   dispatch: PropTypes.func.isRequired,
   votedCharactersLoaded: PropTypes.bool.isRequired,
   characters: PropTypes.object.isRequired
-}
+};
 
 class CharactersContainer extends Component {
   componentDidMount() {
@@ -41,6 +41,6 @@ const mapStateToProps = (state) => {
     votedCharactersLoaded: state.votedCharacters.loaded,
     characters: enhanceCharacters(state)
   };
-}
+};
 
 export default connect(mapStateToProps)(CharactersContainer);

@@ -11,7 +11,7 @@ const propTypes = {
   dispatch: PropTypes.func.isRequired,
   detail: PropTypes.object.isRequired,
   characterId: PropTypes.number.isRequired
-}
+};
 
 class CharacterDetailContainer extends Component {
   componentDidMount() {
@@ -43,7 +43,7 @@ class CharacterDetailContainer extends Component {
 
 CharacterDetailContainer.propTypes = propTypes;
 
-const mapStateToProps = ({characters, characterDetail:detail}, props) => {
+const mapStateToProps = ({characters, characterDetail: detail}, props) => {
   return {
     detail: enhanceCharacterDetail({
       characters,
@@ -51,6 +51,6 @@ const mapStateToProps = ({characters, characterDetail:detail}, props) => {
     }),
     characterId: Number(props.params.number)
   };
-}
+};
 
 export default connect(mapStateToProps)(CharacterDetailContainer);

@@ -13,7 +13,7 @@ const propTypes = {
   votedCharactersLoaded: PropTypes.bool.isRequired,
   characters: PropTypes.object.isRequired,
   searchTerm: PropTypes.string.isRequired
-}
+};
 
 class SearchedCharactersContainer extends Component {
   componentDidMount() {
@@ -46,6 +46,6 @@ const mapStateToProps = (state) => {
     characters: enhanceSearchedCharacters(state),
     searchTerm: state.searchedCharacters.searchTerm
   };
-}
+};
 
 export default connect(mapStateToProps)(SearchedCharactersContainer);

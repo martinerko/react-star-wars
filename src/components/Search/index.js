@@ -17,7 +17,7 @@ class Search extends Component {
 
     const {dispatch} = this.props;
     const searchTerm = this.searchInput.value;
-    this.searchInput.value = ''; //cleanup
+    this.searchInput.value = ''; // cleanup
 
     dispatch(resetSearch());
     dispatch(searchCharacters({
@@ -29,10 +29,10 @@ class Search extends Component {
     return (
       <form className="navbar-form navbar-right" role="search" onSubmit={this.handleSubmit}>
         <div className="input-group">
-          <input type="search" ref={node => this.searchInput = node} className="form-control pull-right" placeholder="Search" required />
+          <input type="search" ref={node => this.searchInput = node} className="form-control pull-right" placeholder="Search" aria-label="Search Character" required />
           <span className="input-group-btn">
-            <button type="submit" className="btn btn-default">
-            <span className="glyphicon glyphicon-search"></span>
+            <button type="submit" className="btn btn-default" aria-label="Search">
+              <span className="glyphicon glyphicon-search" />
             </button>
           </span>
         </div>

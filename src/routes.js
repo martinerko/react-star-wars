@@ -9,12 +9,12 @@ import About from './components/About';
 import Planets from './components/Planets';
 
 const routes = (
-<Route path="/" component={App}>
-    <IndexRoute component={CharactersContainer}/>
-    <Route exact path="/character/:number" component={CharacterDetailContainer}/>
-    <Route exact path="/search" component={SearchedCharactersContainer}/>
-    <Route exact path="/planets" component={Planets}/>
-    <Route exact path="/about" component={About}/>
+  <Route path='/' component={App}>
+    <IndexRoute component={CharactersContainer} />
+    <Route exact path='/character/:number' component={CharacterDetailContainer} />
+    <Route exact path='/search' component={SearchedCharactersContainer} />
+    <Route exact path='/planets' component={Planets} />
+    <Route exact path='/about' component={About} />
   </Route>
 );
 

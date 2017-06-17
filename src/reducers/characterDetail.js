@@ -28,20 +28,20 @@ const characterDetailReducer = (state = INITIAL_STATE, action) => {
       };
     case types.UPDATE_CHARACTER_COMMENT.ACTION:
       return {
-        ...state, //orig data about all characters
+        ...state, // orig data about all characters
         updatingComment: true,
         error: null
       };
     case types.UPDATE_CHARACTER_COMMENT.SUCCESS:
       return {
-        ...state, //orig data about all characters
+        ...state, // orig data about all characters
         ...action.payload,
         updatingComment: false,
         error: null
       };
     case types.UPDATE_CHARACTER_COMMENT.ERROR:
       return {
-        ...state, //orig data about all characters
+        ...state, // orig data about all characters
         error: action.payload,
         updatingComment: false
       };

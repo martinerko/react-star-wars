@@ -13,10 +13,10 @@ export const fetchCharacters = (getState, getFirebase, {pageNumber = 1, searchTe
       const votedCharacters = getState().votedCharacters.data;
       // normalize data by calculating missing info and coverting array into map
       const data = normalizeCharacters(results);
-      //merge score from already preloaded characters from db into newly loaded data from service
+      // merge score from already preloaded characters from db into newly loaded data from service
       Object.keys(votedCharacters).forEach(key => {
         if (key in data) {
-          data[key].score = votedCharacters[key].score
+          data[key].score = votedCharacters[key].score;
         }
       });
 
@@ -29,7 +29,7 @@ export const fetchCharacters = (getState, getFirebase, {pageNumber = 1, searchTe
 };
 
 export const updateCharacterVotes = (getState, getFirebase, character, score) => {
-  //save only minimal data set
+  // save only minimal data set
   const {id, url, name} = character;
 
   return getFirebase()
@@ -43,12 +43,12 @@ export const updateCharacterVotes = (getState, getFirebase, character, score) =>
       return {
         ...character,
         score
-      }
+      };
     });
 };
 
 export const updateCharacterComment = (getState, getFirebase, character, comment) => {
-  //save only minimal data set
+  // save only minimal data set
   const {id, url, name} = character;
 
   return getFirebase()
@@ -62,7 +62,7 @@ export const updateCharacterComment = (getState, getFirebase, character, comment
       return {
         ...character,
         comment
-      }
+      };
     });
 };
 
@@ -73,19 +73,18 @@ export const fetchVotedCharacters = (getState, getFirebase) => {
       .ref('/characters/votes')
       .orderByChild('score')
       .once('value', snap => {
-        //firebase returns an object instead of array...
+        // firebase returns an object instead of array...
         const results = [];
         if (snap) {
           snap.forEach((item) => {
-            results.push(item.val())
+            results.push(item.val());
           });
         }
         resolve(normalizeCharacters(results));
       })
-      .catch(reject)
+      .catch(reject);
   });
 };
-
 
 const getVotesForCharacter = (getState, getFirebase, {characterId}) => {
   return new Promise((resolve, reject) => {
